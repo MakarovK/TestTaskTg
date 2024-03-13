@@ -1,6 +1,5 @@
 package com.tasktg.dto;
 
-import com.tasktg.entity.MinesweeperFieldPojo;
 import com.tasktg.enums.MinesweeperGameCell;
 import lombok.Getter;
 import lombok.Setter;
@@ -46,6 +45,4 @@ public class MinesweeperGameDto {
      * Игровое поле.
      */
     private MinesweeperGameCell[][] field;
-
-    private String message;
 }
