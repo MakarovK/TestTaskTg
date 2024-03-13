@@ -1,0 +1,28 @@
+spring:
+  sql:
+    init:
+      mode: always
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: 'true'
+    show-sql: 'true'
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: #${POSTGRES_USER}
+    password: #${POSTGRES_PASSWORD}
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
