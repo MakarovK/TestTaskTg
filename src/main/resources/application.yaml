@@ -9,6 +9,9 @@ spring:
     properties:
       hibernate:
         format_sql: 'true'
+        types:
+          char: 20000
+          varchar: 20000
     show-sql: 'true'
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres

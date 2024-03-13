@@ -33,7 +33,7 @@ public class MinesweeperFieldPojo {
      * Двумерный массив ячеек игрового поля.
      */
     @Convert(converter = MinesweeperFieldConverter.class)
-    @Column(name = "user_field")
+    @Column(name = "user_field", length = 20000)
     private MinesweeperGameCell[][] field;
 
     /**
@@ -41,7 +41,7 @@ public class MinesweeperFieldPojo {
      * Этот массив не виден для пользователя.
      */
     @Convert(converter = MinesweeperFieldConverter.class)
-    @Column(name = "internal_field")
+    @Column(name = "internal_field", length = 20000)
     private MinesweeperGameCell[][] hiddenField;
 
     /**
